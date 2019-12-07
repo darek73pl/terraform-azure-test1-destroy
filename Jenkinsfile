@@ -11,6 +11,11 @@ pipeline {
     }
     
     stages {
+        stage ('terra-init'){
+            steps {
+                 bat "\"${getTerraformPath()}\\terraform\" init"               
+            }
+        }
         stage ('terra-destroy') {
             steps {
                 bat "\"${getTerraformPath()}\\terraform\" destroy -auto-approve" 
