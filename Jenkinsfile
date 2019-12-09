@@ -7,6 +7,8 @@ pipeline {
         ARM_TENANT_ID            = credentials('Terraform-Azure-Tenant_ID')
         ARM_CLIENT_ID            = credentials('Terraform-Azure-Client_ID')
         ARM_CLIENT_SECRET        = credentials('Terraform-Azure-Client-Secret')
+        
+        //name of container for storage_account_name = "terraformstorageaccount1"
         ARM_STATE_CONTAINER_NAME = "terraform-state-test1"
     }
     
